@@ -24,8 +24,7 @@ s = Service('C:\Program Files (x86)\chromedriver.exe')
 op = webdriver.ChromeOptions()
 op.add_argument('headless')
 browser = webdriver.Chrome(options=op,service=s)
-with open('Url.txt', 'r', encoding="utf8") as f:
-    URL = f.read()
+URL = 'http://yellowpages.in/hyderabad/hotels/361872729'
 browser.get(URL)
 button_class_name = 'loadMoreBtn'
 while True:
